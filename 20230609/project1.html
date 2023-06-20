@@ -1,0 +1,34 @@
+<!--project1-html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    var shape = prompt("square, rectangle, circle");
+    var color = prompt ("red, blue, yellow, pink");
+    var width = parseInt(prompt(" width "));
+    var height = parseInt(prompt(" height "));
+
+    if (shape === "square") {
+        document.write("<div style='width:" + width + "px; height:" + width + "px; background:" + color + "'></div>");
+    } 
+    else if (shape === "circle") {
+        document.write("<div style='width:" + width + "px; height:" + width + "px; border-radius:50%; background:" + color + "'></div>");
+    } 
+    else if (shape === "rectangle") {
+        document.write("<div style='width:" + width + "px; height:" + height + "px; background:" + color + "'></div>");
+    }
+    else {
+        alert("명령어에 맞게 입력하셔야 각 도형에 대한 width , height 값을 조건에 맞게 출력합니다.");
+    }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

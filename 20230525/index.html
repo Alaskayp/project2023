@@ -1,0 +1,115 @@
+<!--파일명 : index.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div</title>
+
+    <style>
+      #first {
+        height: 300px;
+        width: 100px; /*주황색 표시는 바깥쪽 영역이다 다른 영역이 빈자리에 들어오지 않는다*/
+        display: inline-block; /*지정된 크기만큼만 표기됌*/
+        float: right; /*inline-block을 무시해버림*/
+        /*1234-> left  4321---> right*/
+      }
+
+      #parent {
+        width: 300px;
+        height: 1300px;
+        border: 4px solid red;
+        border-radius: 0%; /*라디우스는 px뿐만이 아니라 %로도 표기가 가능하다*/
+        position: relative; /*포지션을 입력해야 부모가 될 수 있음 , 입력하지 않으면 부모가 될 수 없다 , body가 부모가 돼서 밖으로 벗어난다.*/
+        /*absolute랑 relative는 공존이 안된다.*/
+      }
+      /*parent div{}*/
+      #child1,
+      #child2,
+      #child3,
+      #child4 {
+        width: 100px;
+        height: 35px;
+      }
+
+      #child1 {
+        background: blue;
+        /* top:y축 조정  , left,right :x축 조정*/
+      }
+      #child2 {
+        background: green;
+        /*기준점이 부모로 들어간다 absolute랑 relative는 시작점 위치가 다르다.*/
+        /*부모가 가지고 있는 px를 넘어가도 바깥쪽에 표시가 되긴한다*/
+      }
+      #child3 {
+        background: pink;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      #child4 {
+        background: violet;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #parent2 {
+        position: fixed;
+        top: 200px;
+        left: 400px;
+        width: 100px;
+        height: 50px;
+        background: yellow;
+        margin-top: 50px; /*위쪽의 parent 사이 부분을 원하는만큼 늘리고 줄임*/
+      }
+
+      #two {
+        margin-bottom: 100px;
+      }
+
+      #skt {
+        position: sticky;
+        top: 0;
+        height: 50px;
+        background: peru;
+        z-index: 100; /*좌표축을 표현하는 것이기 때문에 단위는 생략된다.*/
+      } /*크기가 제로이기때문에 마치 없는것 처럼 보인다.*/
+
+      #skt ul {
+        list-style-type: none;
+      } /*리스트 앞에 점을 없애줌*/
+
+      #skt ul li {
+        float: left;
+        padding-left: 10px; /*글씨 간견을 왼쪽으로 벌려준다*/
+        float: left; /*순서 right로 설정하면 반대로*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="first">나 div입니다</div>
+    <div id="two">나는 두번째 div입니다</div>
+
+    <div id="skt">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+      </ul>
+    </div>
+
+    <div id="parent">
+      <!--부모-->
+      <div id="child1"></div>
+      <div id="child2"></div>
+      <div id="child3"></div>
+      <div id="child4"></div>
+      <!-- div#OOO을 입력을 하면 자동으로 <0></0> 태그와 아이디가 만들어짐 .을 붙이면 class -->
+    </div>
+
+    <div id="parent2"></div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!--파일명:test.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 마지막</title>
+  </head>
+
+  <style>
+    #boardwrap {
+      width: 1000px;
+      height: 500px;
+      border-collapse: collapse;
+    }
+
+    #boardwrap tr td {
+      border: 1px solid black;
+    }
+
+    #boardwrap.td01 {
+      border-top: 0px;
+      border-left: 0px;
+    }
+
+    #boardwrap.td03 {
+      border-right: 0px;
+      border-top: 0px;
+    }
+
+    #boardwrap.td07 {
+      border-left: 0px;
+      border-bottom: 0px;
+    }
+
+    #boardwrap.td09 {
+      border-right: 0px;
+      border-bottom: 0px;
+    }
+  </style>
+  <body>
+    <table id="boardwrap">
+      <tr>
+        <td class="td01"></td>
+        <td class="td02"></td>
+        <td class="td03"></td>
+      </tr>
+
+      <tr>
+        <td class="td04"></td>
+        <td class="td05"></td>
+        <td class="td06"></td>
+      </tr>
+
+      <tr>
+        <td class="td07"></td>
+        <td class="td02"></td>
+        <td class="td09"></td>
+      </tr>
+    </table>
+  </body>
+</html>

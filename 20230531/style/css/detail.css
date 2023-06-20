@@ -1,0 +1,186 @@
+#main_top{
+    display: flex;
+}
+
+.top_left{
+    width: 500px;
+    padding:20px;
+}
+
+.top_left img{
+    width: 460px;
+}
+
+
+.top_right{
+    width: 500px;    /*pc용에서는 절대값으로 고정해야함(px,pt).*/
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item_title{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d0d0d0;
+}
+    /*flex로 고정 시켜놓은 상태에서는 margin을 줘도 되지만
+    영역의 크기에 영향을 줌 , padding은 크기의 변화없이
+    안쪽 영역을 사용할 수 있음*/
+    /*margin 대상이  싫으면 밀어낸다. 몸집을 키우고 싶으면 padding을 줌*/
+
+.item_price{
+    flex-grow: 1;  
+    padding-top: 30px;
+}
+
+.item_button button:first-child {
+    border: 1px solid blue;
+    color: blue;
+    background: #fff;
+    width:200px;
+    height: 50px;
+}
+
+.item_button button:last-child {
+    background: blue;
+    border: 1px solid blue;
+    color:#fff;
+    width:200px;
+    height: 50px;
+}
+
+/*.maintext{
+    display: flex;
+    padding-top:20px;
+    justify-content: space-around;
+    border-top: 3px solid black;
+    background: #a0a0a0;
+}
+
+.main_image{
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.second_text{
+    margin-top:20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.second_text > h3{
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.second_text div{
+    display: flex;
+    align-items: center;
+}
+.second_text div i{
+    padding-right: 5px;
+    font-size: 30px;
+    color: yellow;
+}
+.second_text div h3{
+    font-size: 30px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+.second_text div b{
+    padding-left: 15px;
+}
+
+.first_text{
+    display: flex;
+    border-top: 3px solid black;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.first_text div:last-child{
+    display: flex;
+    padding: 30px 10px 0 0;
+    color: blue;
+    font-size: 12px;
+}*/
+
+/*강사님 솔루션*/
+
+#main_content{
+    width: 1080px;
+}
+
+.tab_title ul{
+    width:100%;
+list-style-type: none;
+border-top: 2px solid #555;
+border-left: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.tab_title ul li{
+    width: 24.61%;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 20px 14px 0;
+    border-right: 1px solid #ccc;
+}
+
+.tab_title ul li:first-child{
+    margin-bottom: -2px;
+    border-bottom: 1px solid white;
+}
+
+.detail_img{
+    width:700px; /*margin을 주려면 너비가 지정되어있어야한다.*/
+    margin: 50px auto; /*image tag는 padding이 아닌 margin설정*/
+}
+
+#main_bottom{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 1080px;
+    border-top:3px solid #555;
+    padding-top:50px;
+    position: relative;
+}
+
+#main_bottom h3{
+    font-size: 25px;
+    margin:10px 0;
+}
+
+.review_guide{
+    margin-bottom: 20px;
+}
+
+.star_rating{
+    width: 304px;
+}
+
+.star_rating , .star_rating span{
+display: inline-block;
+height: 55px;
+overflow: hidden;
+background: url(../image/star.png);
+}
+
+.star_rating span{
+    /*별 다섯개를 왼쪽에서부터 오른쪽으로 색칠해야하기 때문에 ,
+    왼쪽을 먼저잡음*/
+    background-position: left bottom;
+    vertical-align: top;
+    width:100%;
+}
+
+.guide_btn{
+    position: absolute;
+    top:70px;
+    right:0;
+    color:rgb(124, 235, 235);
+}
+
+

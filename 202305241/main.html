@@ -1,0 +1,167 @@
+<!--main.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우주카페</title>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      #wrap {
+        width: 1250px;
+      }
+
+      #wrap tr td {
+
+        position: relative;                /*부모에서 기준점을 정하지 않으면 body가 기준점이 된다.*/
+      }
+
+      .head {
+        width: 1200px;
+        height: 50px;
+        text-align: right;
+        font-size: 10px;
+        color: gray;
+      }
+
+      .logo_wrap {
+        width: 150px;
+      }
+
+      .logo_wrap img {
+        width: 150px;
+        height: 80px;
+      }
+
+      /* #menu_list tr td {
+        border: 0;
+        padding: 0 30px;                           
+      } */
+      /*일정한 간격을 유지하고자 하면 width 나 height로 주는것이 아닌 padding으로 조절해야한다.*/
+
+      .menu_list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      /*float 은 해당 태그 (요소)를 어떻게 정렬할지 정의하는 속성이다.
+      float은 묶음 태그에만 적용 (<div>,<p>,<ol>,<table>,<img>)
+      float:left 는 왼쪽정렬
+       -float이 적용된 태그들이 한줄로 왼쪽 정렬 된다.
+       */
+
+      .menu_list_title {
+        float: left;
+        padding: 0 24px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer; /*마우스를 글씨에 드래그 할 시 , 손가락 모양으로 바뀜*/
+      }
+
+      .content_wrap {
+        /*배경색 대신 이미지값을 넣어서 배경에 사진을 나타나게 한다*/
+        background-image: url("../image/bg.jpg");
+        height: 1080px;
+      }
+
+      .content_Text {
+        position:absolute; /*부모의 시작점이 기준이 됌 */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 32px;
+        font-weight: 900;
+        font-family: impact;
+        padding-left: 150px;
+        top:0;
+        left:200px;
+      }
+
+
+     .mainText{
+      font-size: 96px;
+      margin: 20px 0px 40px 0px;    /*위   오른쪽   아래   왼쪽*/
+     }
+
+
+     .subText{
+     letter-spacing: 5px;
+     margin: 90px 0px;  /*위   아래   오른쪽  왼쪽*/
+     }
+
+     .underText{
+      text-decoration: underline;
+      text-underline-offset: 10px;
+    }
+
+    .grayText{
+      /*color:gary*/
+      opacity: 0.6;   /* 범위 0~1 (소숫점 단위로 사용가능) , 글씨의 연함*/
+    }
+
+
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <table id="wrap">
+      <tr>
+        <td colspan="2" class="head">티켓 구매하기 / 로그인</td> 
+      </tr>
+
+      <tr>
+        <td class="logo_wrap">
+          <!--a태그 링크, 페이지 이동을 위한 태그-->
+           <img src="../image/coffee.PNG">
+        </td>
+
+        <!-- <table id="menu_list"> 
+            <tr>
+              <td>우주플레이스 소개</td>
+              <td>메뉴이야기</td>
+              <td>브랜드 지원</td>
+              <td>우주플레이스 앱 & 맴버십</td>
+              <td>가맹점 창업안내</td>
+              <td>새소식&공지</td>
+            </tr>
+          </table> -->
+        <!--class 보다는 id가 더 상위태그임 , 태그에 명령어를 넣어서 변화를 주려면 동격의 태그가 되어야함.-->
+
+        <td class="menu wrap">
+          <!--메뉴리스트는 보통 table 보다는 ul을 주로 많이 사용함(편리성)-->
+
+          <ul class="menu_list">
+            <li class="menu_list_title">회사 소개</li>
+            <li class="menu_list_title">캐릭터 소개</li>
+            <li class="menu_list_title">지점 안내</li>
+            <li class="menu_list_title">공지&이벤트</li>
+            <li class="menu_list_title">커뮤니티</li>
+            <li class="menu_list_title">고객의소리</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="content_wrap">
+          <ul class="content_Text">
+            <li class="mainText">MENU STORY</li>
+            <li class="underText">COFFEE STORY</li>
+            <li class="subText grayText">DESSRT STORY</li>
+            <li class="subText grayText">DELI STORY</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

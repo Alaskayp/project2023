@@ -1,0 +1,45 @@
+table tr td{
+    border:1px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/* table tr:first-child td:first-child{
+    background: yellow;
+}
+
+table tr:first-child td:last-child{
+    background: red;
+}
+
+
+table tr:last-child td:first-child{
+background: blue;
+}
+
+table tr:last-child td:last-child{
+    background: aqua;
+    } */
+
+
+table tr td:last-child{
+    background: green;
+}
+
+table tr:last-child td:nth-child(2){
+    background: yellow;
+}
+
+#result{
+    width: 400px;
+    height: 50px;
+    font-size: 50px;
+    border-top:7px solid red ;
+    border-bottom: 7px solid red;
+    border-left: none;
+    border-right:none;
+    outline:none;
+}

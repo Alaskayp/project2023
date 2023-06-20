@@ -1,0 +1,192 @@
+<!--script_loop2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        //실습 문제 2,3개 정도 진행 예정
+        //실습 1. 랜덤 범위 1~100 , 무한루프 사용
+        // 랜덤 값 중에서 4의 배수의 값이 10개가 나오면 무한루프 중지
+
+        //랜덤 범위 1~100중에 랜덤 값이 4의 배수의 값이 10개가 나오면 무한루프를 정지
+//         var count=0;
+
+//         while(true){
+//             var ranNumber = Math.floor(Math.random()*100)+1;
+
+//             if(ranNumber%4===0){ 
+//                 document.write("4의 배수:"+ranNumber+"  count :"+count+"<br>");
+//                 count++;
+//         }
+//             if(count===10){
+//                 document.write("루프를 종료합니다");
+//             break;
+//     }
+// }     
+
+        //10번을 반복하기
+        //반복문 안에서 정수를 입력하고 , 입력한 정수 출력하기
+
+        // for(var i=1;  i<=10; i++){
+        //     var number =parseInt(prompt("정수를 입력하세요"));
+        //     document.write("입력한 값"+number);
+        // }
+
+        /*
+        
+        실습 3.
+        //이번 문제는 혼자가 아니라 팀으로 풀어야 합니다.
+        // 그래서 팀을 정할것인데...
+        // 일단 문제는 총 2문제이고 각 팀에서 만들고 싶은 문제 하나를
+        선택해서 만들면 됌.
+
+
+        문제1. 숫자 야구게임
+                랜덤값으로 3개의 숫자 뽑아내기 (단 ,3개의 숫자는 중복아님)
+                랜덤 범위는 1~9
+                랜덤 숫자 3개를 맞출때까지 계속하기
+                3개의 숫자를 입력합니다.
+                랜덤 숫자가 8 3 5 이고
+                1입력 2입력 8입력 했다면 0스트라이크 1볼 2아웃이라고 출력
+                3입력 9입력 6입력 했다면 0스트라이크 0볼 3아웃이라고 출력
+                5입력 3입력 8입력 했다면 2스트라이크 1볼 0아웃이라고 출력
+                자리와 숫자가 일치하면 스트라이크 자리가 다르고 숫자만 있다면 볼 ,
+                없는 숫자는 아웃
+        */
+
+
+        //우리팀이 했던것
+        // var random1 =Math.floor(Math.random()*9)+1;
+        // var random2 =Math.floor(Math.random()*9)+1;
+        // var random3 =Math.floor(Math.random()*9)+1;
+
+        // var ans1 =parseInt(prompt("첫번째 숫자 입력"));
+        // var ans2 =parseInt(prompt("두번째 숫자 입력"));
+        // var ans3 =parseInt(prompt("세번째 숫자 입력"));
+
+
+        // var strike=0;
+        // var ball =0;
+        // var out=0;
+
+
+
+        // //스트라이크의 경우
+        // if(random1==ans1){
+        //     strike++;
+        // }
+        // else if(random2==ans2){
+        //     strike++;
+        // }
+        // else if(random3==ans3){
+        //     strike++;
+        // }
+
+
+        // //볼의 경우
+        // if(random1==ans2 || random1==ans3){
+        //     ball++;
+        // }
+        // else if(random2==ans1 || random2==ans3){
+        //     ball++;
+        // }
+        // else if(random3==ans2 || random3==ans2){
+        //     ball++;
+        // }
+
+
+        // //아웃의 경우
+        // if(random1 != ans1 || random2 != ans2 || random3 != ans3){
+        //     out++;
+        // }
+        // else{
+        //     out++;
+        // }
+
+        // //출력 부분 document.write나 alert로 표현 가능
+        // document.write("컴퓨터의 1번 슬롯 :"+random1+"\n 컴퓨터의 2번 슬롯 :"+random2+"<br> 컴퓨터의 3번 슬롯 : "+random3+"\n");
+        // document.write("유저의 1번 슬롯 : "+random1+"<br> 유저의 2번 슬롯 : "+random2+"<br> 유저의 3번 슬롯 : "+random3+"\n");
+        // document.write("<br>스트라이크 : "+strike+"\n 볼 :"+ball+"\n아웃 : "+out);
+
+
+
+        // 강사 솔루션
+
+        // var a=0,b=0,c=0;
+        // while(a==b || a==c || b==c){                //3개 숫자 중복없이
+        //     a=Math.floor(Math.random()*9)+1;
+        //     b=Math.floor(Math.random()*9)+1;
+        //     c=Math.floor(Math.random()*9)+1;
+        // }
+
+        // var result="";
+        // while(true){
+        //     var str=0,ball=0;
+        //     var u1=parseInt(prompt("1~9"));         // 유저가 입력한 숫자 3개
+        //     var u2=parseInt(prompt("1~9")); 
+        //     var u3=parseInt(prompt("1~9")); 
+        //     if(u1==a) str++;                        // 숫자와 자리가 일치해야 스트라이크
+        //     if(u2==b)str++;    
+        //     if(u3==c)str++;     
+        //     if(u1==b || u1==c)ball++;              // 자리는 같으나 숫자가 다른 경우 볼
+        //     if(u2==a || u2==c)ball++;
+        //     if(u3==a || u3==b)ball++;
+        //     result+=u1+" "+u2+" "+u3+"\n"+str+"스트라이크 "+ball+"볼 "+(3-str-ball)+"아웃\n"   //그 외에 3에서 str,ball을 뺀 나머지 경우의 수는 아웃     
+        //     alert(result);
+        //     if(str==3)break;                       // 스트라이크가 3개가 나올 시 , break를 걸어서 while문을 종료 시킨다.
+        // }
+
+            /*
+            문제 2. 베스킨라빈스 31
+            컴퓨터와 1대1 게임
+            숫자 몇개 낼것인지 입력
+            2라고 입력했다면 자동으로 1 2라고 출력
+            그 다음 컴퓨터가 몇개 낼것인지 랜덤으로 정하기
+            3이라고 나왔다면 자동을 3 4 5라고 출력
+            그렇게 31을 포함하는 숫자를 말하게 되는 쪽이 패배
+            */
+
+            //비밀번호 4개 숫자를 맞추세요.
+            //조건 다음과 같다.
+            //각 숫자는 1~9사이의 값이다.
+            //2.4개의 숫자는 중복이 없다.
+            //3.1번째 숫자는 4번째 숫자보다 2만큼 크다.
+            //4.2번째 숫자는 3번째 숫자보다 작다.
+            //5.비밀번호숫자 + 비밀번호 역순 숫자의 합은 16896이다.
+            // ex) 비밀번호가 1234라면 1234+4321
+            //위 조건에 해당하는 숫자 4개를 찾아주는 코드를 만드세요.
+
+
+
+            for (var a = 1; a <= 9; a++) {
+                for (var b = 1; b <= 9; b++) {
+                    for (var c = 1; c <= 9; c++) {
+                        for (var d = 1; d <= 9; d++) {
+                            if (a != b && a != c && a != d && b != c && b != d && c != d) {
+                                if (a == d + 2 && b < c) {
+                                    var e = a * 1000 + b * 100 + c * 10 + d;
+                                    var f = d * 1000 + c * 100 + b * 10 + a;
+                                        if (e + f == 16896) {
+                                                document.write("비밀번호:"+e);
+                                                break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    // </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

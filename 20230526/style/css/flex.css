@@ -1,0 +1,170 @@
+#flex1 {
+  width: 1000px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#flex1 div {
+  width: 100%;
+}
+.red {
+  background: red;
+}
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+#flex2 {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  /* flex 기본 적용 값
+    flex-direction:row;
+    flex-wrap:nowrap; */
+}
+#flex2 div {
+  width: 25%;
+}
+
+#flex4 div {
+  width: 15%;
+}
+
+#flex4 {
+  justify-content: space-around;
+}
+
+.red {
+  background: red;
+}
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+
+#flex3 {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+}
+
+.flexshape {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+}
+
+#flex5 div {
+  width: 15%;
+  height: 200px;
+}
+
+/* align-items strech 상태였기 때문에 화면에 그림이 표시됨
+   기본 방향이 수직이기때문에 높이가 나타남
+
+   align-items flex-start일땐 부모의 크기만큼 확장되지 않아서
+    화면에 출력되지 않음 , 화면에 출력되게 하려면 높이를 지정해야한다.*/
+
+#flex5 {
+  align-items: center;
+}
+
+.red {
+  background: red;
+}
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+
+#flex6 div {
+  width: 15%;
+  height: 200px;
+  display: flex;
+}
+
+.red {
+  background: red;
+}
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+
+/*색깔 클래스를 지정해서 따로따로 위치를 배치*/
+
+#flex6 .red {
+  align-self: flex-end;
+}
+
+#flex6 .yellow {
+  align-self: center;
+}
+
+#flex6 .green {
+  height: auto;
+  align-self: stretch;
+}
+
+#flex7 {
+  flex-direction: column;
+  /*주축을 다루는것이 justify-content*/
+  justify-content: space-around;
+}
+#flex7 div {
+  width: 25%;
+  height: 50px;
+}
+
+/*order 반응형 만들때 주로 사용함*/
+
+#flex7 .red {
+  order: 3;
+}
+
+#flex7 .green {
+  order: 1;
+}
+/*기본값 000px + 지정 width값 전부 더한 후 나눈값을 좌표값 만큼 곱해서 더함*/
+
+#flex8 div {
+  width: 120px;
+}
+
+#flex8 .red {
+  flex-grow: 1;
+}
+
+#flex8 .yellow {
+  flex-grow: 1;
+}
+
+#flex8 .green {
+  flex-grow: 0;
+}
+#flex8 .blue {
+  flex-grow: 2;
+}

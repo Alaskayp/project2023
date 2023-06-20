@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--지금까지 수업 중에서 이해 안되는 거 한 사람당 하나씩만  의무적으로-->
+
+
+    <!--id와 class
+    id는 html 문서에서 유일한 명칭이고 , class는 여러태그들이 같은 명칭
+    을 가질 수 있다. class를 하지 않고 id를 사용하는 이유
+    id는 단일이고 class는 다수의 값이기 때문에 인식 하는 자체가 다르다.
+    class는 배열이라는 형태로 처리되고 , id는 단일 값으로 처리된다.
+    배열이라는 것은 값이 하나일 수도 있고 여러개 일수도 있는 자료구조의
+    한 구조이다. 처음 html 문서가 브라우저에 오픈 되면 class들을 배열의
+    구조로 저장해둔다. id는 변수의 구조이다. 변수와 배열에 대해서는 자바
+    스크립트에서 다룰것인데 변수와 배열은 사용하는 방식이 다르다. 접근하는
+    것은 변수가 빠르다.
+    또, style에서 태그 > id > class 순서로 적용되는 순위가 다르다.
+    class 보다는 id가 더 우선이다. 그래서 class를 사용하는 이유는 대체적으로
+    개발자들은 여러태그들을 하나의 이름으로 style을 적용하고 싶거나 또는 자식
+    태그들에 사용한다. 왜 자식태그에 사용하나면 class가 id보다는 우선 순위가
+    낮으니까
+    -->
+
+    <!-- flex-flow 
+        flex--direction과 flex-wrap의 단축 속성이다.
+        margin-right:50px; 시계방향
+        margin-left:50px;
+        margin:0 50px; <-- 하나로 단축해서 씀. 이것을 단축속성이라 부른다.
+        
+        border-color:red;
+        border-style:solid;
+        border- 1px solid red; <-- 하나로 단축
+
+        flex-direction=row;
+        flex-wrap:wrap;
+
+        flex-flow:row wrap; : 단축속성
+
+    -->
+
+
+    <!--
+    html문서의 기본 흐름은 html의 구조를 따른다.
+    html 구조는 <div>,<p>,<b>
+        에서 div의 영역을 먼저 생성하고 , div영역안에 p의 영역을 생성
+        하면서 p의 수용할수 있게 div의 영역크기가 변한다.
+        p안에 b의 영역이 생성되고 p안에 b를 수용할수 있게 크기가 변하고
+        p의 크기가 변했으므로 div의 크기도 변한다.
+
+        부모의 크기는 자식을 품을 수 있는 크기여야만 한다가 기본이다.
+        위와 같이 기본흐름에서 float 속성을 가지는 태그는 흐름에서
+        빠지게 된다. p태그에 float 속성을 주면 div 생성하고 내부에 p태그를
+        생성해야 하는데 p 태그에 새로운 block 박스를 생성하여  원래 부모
+        div와 별개로 화면에 그려진다.
+
+        부모인 div의 영향을 받지 않는 p태그에 부모의 영향을 받게 하려면
+        clear라는 속성을 부여하면 된다. clear는 float에 부여된 상태를 해제
+        할 수 있는 속성
+
+        clear에 사용할수 있는 값은 아래와 같음
+        -none 아무것도 해체하지 않는다.
+        -left float:left를 해제한다.
+        -right float:right를 해제한다.
+        -both 모든 float를 해제한다.
+        -inherit 부모의 속성을 상속 받는다.
+
+        clear를 사용하여 float를 해제하면 float이 적용되기 이전의 모습으로
+        돌아간다.
+    -->
+
+    <!--
+    z-index의 값을 가지려면 position을 설정해야한다.
+    설정하지 않으면 x,y,z-index의 값을 가질 수 없다.
+    -->
+
+    <!--미디어쿼리;
+        @media 
+        {
+
+
+
+
+        }
+
+        미디어쿼리의 조건이 참인경우에만 style의 속성이 적용된다.
+        참이 아닌경우에는  미디어쿼리 외부의 속성이 적용된다.
+
+    -->
+
+    <!--display:flex
+
+        display:flex는 공간에 크기를 맞추거나 줄이는 방법을 설정 하는 속성
+
+        display:flex
+        내부 지식요소의 배치를 위한 설정
+        지식요소의 방향을 가로 , 세로로 배치 할 수 있고
+        빈공간을 채우거나 넘어가지 않도록 조절 할수 있다.
+        수직과 수평을 쉽게 조작할 경우에 사용되기도 한다.
+
+        align-items를 통해 중앙을 맞춰 줄 수 있다.(수직)
+        justify-content를 통해 각 뱡향 및 간격을 설정 할 수 있음.
+
+
+        여러줄의 요소를 한줄로 하고싶다면 display:flex를 주면된다.
+        한줄로 표시되는 요소들을 여러줄로 표시하고 싶다면
+        display:flex;
+        align-items:center; 를 입력하면 된다.
+
+        여러 요소가 한줄로 표시되는 상황에서 일정한 간격으로
+        펼쳐주려면
+
+        display:flex;    justify-content:space-between;
+                        justify-content:space-around;
+        를 입력하면된다.
+
+
+        flex는 자식 요소들을 배치 및 크기에 대해 쉽게 설정하기
+        위한 방법이다.
+    -->
+
+
+
+    <!--
+    #box1{
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end; /*수직*/
+    align-items: flex-end;     /*수평*/
+    flex-direction: column;
+}
+    -->
+
+</body>
+</html>

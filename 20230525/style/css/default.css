@@ -1,0 +1,43 @@
+body {
+  /*body에 여백을 제거하여 화면에 꽉채워서 사용하려고 합니다.*/
+  padding: 0;
+  margin: 0;
+  background-color: brown;
+  color: #e6e6e6;
+  position: relative;
+}
+
+#wrap {
+  position: relative;
+  width: 100%;
+}
+
+#header {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #878c9e;
+  position: relative;
+  display: flex; /*반드시 메뉴의 메인태그에 사용해야 적용된다.*/
+  padding: 20px 0px;
+  font-size: 25px;
+  justify-content: space-around; /*간격을 일정하게 벌려준다. display:flex 나 display:grid
+  일때만 가능하다.*/
+}
+
+#section {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.box1 {
+  width: 80%;
+  height: 400px;
+  background: black;
+}
+
+.box2 {
+  width: 20%;
+  height: 400px;
+  background: pink;
+}

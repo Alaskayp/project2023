@@ -1,0 +1,164 @@
+
+#wrap{
+    margin: 0;
+    padding: 0;
+}
+
+#main_banner{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#center_div{
+    width: 1080px;
+    display: flex;
+    margin: 30px auto;
+}
+
+.center{
+    flex-grow: 1;
+    margin: 0 20px;
+    margin-top:-20px;
+}
+
+.first_image{
+    height: 590px;
+    width: 15%;
+    border-radius: 10px;
+    background: url(../image/banner2.PNG);
+}
+
+.final_image{
+    height: 590px;
+    width: 15%;
+    border-radius: 10px;
+    background: url(../image/banner2.PNG);  
+}
+
+
+.first_text{
+    display: flex;
+    border:1px solid rgb(64, 64, 231);
+    background: rgb(64, 64, 231);
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 160px;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.second_text{
+    display:flex;
+    border:1px solid rgb(64, 64, 231);
+    background: rgb(64, 64, 231);
+    border-radius: 10px;
+    margin: 20px 0;
+    height: 160px;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px;
+}
+
+.third_text{
+    display: flex;
+    border:1px solid rgb(64, 64, 231);
+    background: rgb(64, 64, 231);
+    border-radius: 10px;
+    height: 160px;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px;
+}
+
+#last_div{
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.first_box{
+    width: 40%;
+    background: url(/style/image/lastbox.PNG) ;
+    flex-grow: 2;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.second_box{
+    width: 30%;
+    background: url(/style/image/lastbox1.PNG) ;
+    flex-grow: 1;
+    height: 300px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.third_box{
+    width: 20%;
+    background: url(/style/image/lastbox2.PNG) ;
+    flex-grow: 0;
+    height: 300px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.second_box h4{
+    margin-left: 30px;
+}
+
+
+.first_box ul{
+    list-style-type: none;
+}
+
+.second_box ul{
+    list-style-type: none;
+    margin-left: -9px;
+}
+
+.second_box h2{
+    font-size: 20px;
+}
+
+.third_box h4{
+    font-size:13px;
+    text-align: center;
+}
+
+.third_box h2{
+    padding-left:15px;
+
+}
+
+.first_box h4 , h3 , h2 {
+    padding-left:30px;
+}
+
+.first_box ul li{
+    margin-left:-11px;
+}
+
+
+    .first_box h2 {
+        font-size: 30px;
+    }
+
+
+.second_box u{
+    color: brown;
+    text-decoration: none;
+}
+
+
+.second_box b{
+    color: rgb(226, 135, 17);
+}

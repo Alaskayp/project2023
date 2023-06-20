@@ -1,0 +1,214 @@
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+#wrap {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#header,
+#section_wrap,
+#footer {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#header {
+  display: flex;
+  background: aqua;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.menu ul {
+  font-size: 15px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  /*여기에 center를 주는것이 아닌 상위부모에 center를 주줘야
+  전체적인 글씨 배치가 가운데로 정렬된다*/
+  /*글씨에 대한 정렬은 이 list안에서 justify-content를 줘서
+  위치를 바꾼다.*/
+}
+
+.logo {
+  width: 140px;
+}
+.logo img {
+  width: 100%;
+}
+
+.menu {
+  /*width: calc(100% - 140px);*/
+  flex-grow: 1;
+}
+
+#section_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+#section_top {
+  order: 1;
+  display: flex;
+}
+
+#section_bottom {
+  order: 2;
+}
+.slider {
+  width: 400px;
+}
+.slider img {
+  width: 100%;
+}
+
+.gallery {
+  width: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gallery_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.thumbnail {
+  width: 30%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+.popularSearch {
+  background: brown;
+  flex-grow: 1; /*색을 채워줄수 있다*/
+}
+
+.latest_post {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 25%;
+  background: fuchsia;
+}
+
+.latest_post .latest {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.popular_post {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 25%;
+  background: seagreen;
+}
+
+.popular_post .popular_list {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.social {
+  flex-grow: 1;
+  font-size: 40px;
+  background: aquamarine;
+  display: flex; /*flex를 사용하지 않으면 align-items를 사용할 수 없다.*/
+  align-items: center;
+  justify-content: space-around;
+}
+
+@font-face {
+  src: url("https://www.axis-praxis.org//fonts/webfonts/MetaVariableDemo-Set.woff2"); /*url이 앞으로 와야한다*/
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.banner {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  /*space-around와 양 끝간의 간격이 다르다.
+  space-evenly는 양끝간의 간격부터 모두 일정하다*/
+  align-items: center;
+  background: sandybrown;
+  flex-grow: 1;
+}
+
+.banner main {
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 60px;
+  font-family: "Meta", sans-serif;
+  color: transparent;
+  text-align: center;
+  -webkit-text-stroke: 4px #d6f4f4; /*글씨 외곽선*/
+  transition: all 0.5s;
+  text-shadow: 5px 5px 0px #07bccc, 8px 8px 0px #e601c0, 11px 11px 0px #e9019a,
+    14px 14px 0px #f40468, 34px 34px 10px #482896;
+} /*값:수평거리 수직거리 흐림정도 색*/
+
+.banner main:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+
+/*font-variation-Settings 폰트의 설정을 일괄적으로 할 수 있다.
+  폰트 두께 , 폰트 기울기 , 폰트 너비를 설정할 수 있다.
+  wght는 폰트 두께 , ital은 이텔릭체 wdth 넓이 
+
+  transprent
+  -webkit- : 구글 , 사파리 , 브라우저에만 적용
+            무언가 특별한 효과를 넣기 위해서는 
+            기본적으로 css안에서 해결 할 수 있지만
+            브라우저들만 가지고 있는 기능들이 있다 , 이 기능을 넣으려면
+            브라우저만 가지고 있는 접조어를 넣어야한다.
+   -moz- : 파이어폭스 브라우저에 적용
+   -ms- 익스플로러  , 엣지 적용
+   -o- : 오페라 브라우저에서 사용
+   접두어 -text-stroke : 글씨 외곽선을 표현
+   transition : css의 속성을 변경할때 속도조절
+                css속성명 시간(단위는 초 , 표기는s)
+   text-shadow: 수평거리 수직거리 흐림정도 색;
+  */
+
+#section_bottom {
+  order: 2;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between; /*justify-self 도 있음*/
+  background: #232323;
+  padding: 10px;
+  box-sizing: border-box; /*내가 만든 div에 맞게 간격 맞추기*/
+}
+
+.text1 {
+  align-self: flex-end; /*좌식으로 움직이기*/
+}

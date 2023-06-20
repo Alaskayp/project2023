@@ -1,0 +1,37 @@
+<!--script_func4.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보 게임 만들기</title>
+    <link rel="stylesheet" href="/static/css/rock1.css">
+    <script src="./js/rock.js"></script>
+</head>
+<body>
+    <button onclick="start()">START</button>
+
+    <div class="com">
+        <img id="game_image" src="./image/scissors.PNG">
+    </div>
+
+    <div>
+        <b>Com VS User</b>
+        결과<b id="result"></b>
+    </div>
+
+    <div class="user">
+        <img src="./image/rock.PNG">
+        <img src="./image/scissors.PNG">
+        <img src="./image/paper.PNG">
+    </div>
+
+
+    <div class="select">
+        <b onclick="result1(0)">가위</b>
+        <b onclick="result1(1)">바위</b>
+        <b onclick="result1(2)">보</b>
+    </div>
+    <div id="output"></div>
+</body>
+</html>

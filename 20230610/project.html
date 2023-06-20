@@ -1,0 +1,322 @@
+<!--script_loop1.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    /*
+
+    제어문은 공통적으로 조건에 의해 동작한다.
+    반복문은 정해진 횟수만큼 반복을 시킬 수 있고 , 무한대로 반복 가능함.
+    반복문 사용시 무한루프에 빠지지않게 코드를 작성해야한다.
+    반복문에 무한루프를 사용시에는 항시 빠져나올수 있는 코드를 둬야한다.
+
+    반복문은 기본적으로 지정된 횟수만큼 실행 될수 있다.
+    지정된 횟수만큼 실행 되려면 처음 시작값과 끝값이 필요하다.
+    시작값을 1, 끝값을 10으로 설정하면 1,2,3,4,5,6,7,8,9,10 총 숫자가
+    10개이므로 반복횟수는 10번 반복된다.
+    시작값과 끝나는 값을 설정하고  시작값에서 얼마씩 증가 할것인지 , 또는 감소할것인지
+    설정도 필요하다. 증가 또는 감소의 값에 따라서 반복되는 횟수가 달라진다.
+
+
+    for(시작값; 끝나는값; 증가또는 감소값){
+
+    }
+
+    for( var i=1; i<=10; i++){
+        반복 실행할 코드 입력
+    }
+
+    for( var i=1; i<=10; i+n){ //n의 값만큼 증가
+    반복 실행할 코드 입력
+    }
+
+    반복문에 설정해준 조건식이 참인경우에만 반복문의 {}안에 내용이 실행된다.
+    조건식이 거짓이 되면 반복문은 그 즉시 종료 , 더 이상 실행되지 않는다.
+
+    시작값은 특별한 경우가 아니라면 반복 횟수의 편의를 위해 1또는0 부터 시작한다.
+    증가 또는 감소값은 특별한 경우가 아니라면 1씩 증가,감소한다.
+
+
+
+
+    */
+
+
+
+
+
+    //반복문을 한줄 사용하면 여러번 쓸 필요 없이 실행된다.
+    //**제어문은 굉장히 중요함 . 다룰 줄 모르면 코드가 굉장히 길어짐.
+    //** 더이상 참이 아닐때까지 , 
+    //참이라면 중괄호 안에 있는 내용이 실행된다. --> 그다음이 증감식 동작. --> 조건식 비교
+    // 가 실행된다. (loop)
+
+    // for(var i=1; i<=100; i++){
+    // document.write("<div>"+i+"</div>"); 
+    // }
+
+    // for(var i=1; i<=9; i++){
+    //     document.write("<div> 6* "+i+"= "+(i*6)+"</div>");
+    // }
+
+// 1~9중에서 숫자 하나를 입력 받아 입력한 숫자에 맞는 구구단이 출력되게 하시오.
+    // var num=parseInt(prompt("1~9까지 숫자 중 하나"));
+    // for (var i=1; i<=9; i++) {
+    //     document.write("<div>  "+num+" *  "+i+" = "+(i*num)+"</div>");
+    // }
+
+    //실습 2. 1부터 77까지 출력하시오.
+
+//     for (var i=1; i<=77; i++) {
+//     document.write("<div>"+i+"</div>");
+//     }
+
+    //실습 3. 1부터 120까지 3씩 증가해서 출력하시오.
+    // i=i+n 또는 i+=n 으로도 입력 가능함.
+
+    // for(var i=1; i<=120; i+=3){
+    // document.write("<div>"+i+"</div>");
+    // }
+
+    //실습 4. 정수 하나를 입력하고 , 입력한 숫자를 시작값으로 하여
+    //         10번 반복문 만들기
+
+    // var num= parseInt(prompt("정수를 입력하시오."));
+    // // 정수 num을 시작값으로 하여 12번의 반복수행 하고 ,숫자를 출력하는 값을 보여줌.
+    // for(var i=num; i<num+12; i++) 
+    // {
+    //  document.write("<div>"+i+"</div>");
+    // }
+
+    /* 두번째 방법
+    var num= parseInt(prompt("정수를 입력하시오."));
+    ex2) for(var i=0; i<12; i++) {
+        document.write("<div>"+(num+i)+"</div>");
+    }
+    */
+
+    // var count=0;
+    // for(var i=1; i<=100; i++){//변수 i는 1부터 1씩 증가하여 101까지 (101부터는 거짓)
+    // if(i&4==0)
+    // count++;
+    // }
+    // document.write("1~100중에서 4의 배수는 "+count+"개");
+
+    //동전 앞면 뒷면 맞추기 게임을 10번 한다. 10번해서 내가 몇번 이기고 몇번졌는지
+
+//     var win=0; // 이긴 횟수 초기화
+//     var lose=0; // 진 횟수 초기화
+//     for(var i=1; i<=10; i++){
+//         var coin=Math.floor(Math.random()*2)+1; //동전 던지기
+//         var user= parseInt(prompt("1.앞면 2.뒷면"));
+//     if(coin == user){
+//         document.write("정답<br>")
+//         win++;
+//     }
+//     else{
+//         document.write("오답<br>");
+//         lose++;
+//     }
+// }
+//     document.write("이긴 횟수 "+win+"개");
+//     document.write("진 횟수 "+lose+"개");
+
+    //------------------------------------------------------------------------------------------------------------------------------//
+
+
+    //주사위 던지기 게임 10판
+    //컴퓨터와 내가 주사위를 던진다. 숫자가 큰쪽이 승리 , 같은 숫자면 비김
+    // 10판 해서 내가 몇번 이기고 지고 비겼는지 출력하기
+
+    // var win=0;
+    // var lose=0;
+    // var draw=0;
+
+    // for(var i=1; i<=10; i++){
+    //     var result= parseInt(prompt("1.주사위 굴리기"));
+    //     var user=Math.floor(Math.random()*6)+1;
+    //     var com =Math.floor(Math.random()*6)+1;
+
+    //     if(user > com){
+    //         document.write("이김<br><br>");
+    //         win++;
+    //     }
+
+    //     else if(user < com){
+    //         document.write("짐<br><br>");
+    //         lose++;
+    //     }
+
+    //     else if(user==com){
+    //         document.write("비김<br><br>");
+    //         draw++;
+    //     }
+    //     else{
+    //         document.write("error<br>");
+    //     }
+    // }
+
+    //     document.write("이긴 횟수:"+win+"개<br>");
+    //     document.write("비긴 횟수:"+draw+"개<br>");
+    //     document.write("진 횟수:"+lose+"개<br>");
+
+    //------------------------------------------------------------------------------------------------------------------------------//
+
+    /*
+
+    for(초기값; 조건식; 증강식){
+
+    
+    }
+    for문은 반복되는 횟수가 정해져 있는 경우에 주로 사용한다.
+
+    반복되는 횟수가 정해져 있지 않은 경우에는 while문을 사용한다.
+    **while문의 조건식에서 세미클론을 제외한다. 한줄이기 때문에.
+    while문의 기본 형태
+
+    var i=1; 초기값
+    while(i<=10){ 조건식
+        내용
+        i++; 증강식
+
+
+
+
+        **이중 for문
+        for(var i=1; i<=3; i++){
+        for(var k=1; k<=2; k++){
+    }
+    }
+    }
+
+
+
+    // while(true){//무한루프
+    //     if(i=100)    //무한루프를 중지시키는 방법
+    //         break;  //break는 제어문을 중단 시키는 방법이다.
+    //     i++;   
+    // }
+
+    // while(true){
+    //     var num=parseInt(prompt("정수 입력"));
+    //     if(num==0) break;
+    // }
+
+    //너비를 100px이상 입력하시오.
+        // while(true){
+        //     var width=parseInt(prompt("너비입력(100이상)"));
+        //     if(width>=100) break;
+        // }
+
+        /*
+
+        up & down 게임
+        랜덤 숫자의 하나 (랜덤 범위는 1~50)
+        랜덤 숫자를 맞출때까지 계속 입력하기
+        입력한 숫자가 랜덤 값과 일치하지 않으면 UP 또는 DOWN 이라고 출력
+        입력한 숫자가 랜덤값보다 작으면 UP ,
+        입력한 숫자가 랜덤값보다 크면 DOWN
+        출력은 alert로
+        정답이면 write로 랜덤숫자와 함께 정답이라고 출력
+        과제와 밀접한 관계가 있음.
+
+        */
+
+
+        // var number = Math.floor(Math.random()*50)+1; // 랜덤 숫자 1~50까지 출력
+
+        // while(true){
+        //     var user=parseInt(prompt("1~50 중 하나의 숫자를 입력하세요")); // 1~50까지 임의의 숫자 입력
+        //     if(user==number){
+        //         document.write("정답 당첨숫자는:"+number+"이다"); break; // 당첨 숫자가 입력되면 break를 걸어서 무한 루프를 멈춤.
+        //     }
+        //     else if(user < number){ // 유저의 숫자보다 임의의 숫자가 높으면 위
+        //         alert("UP"); 
+        //     }
+        //     else if(user > number){ // 유저의 숫자보다 임의의 숫자가 낮으면 아래
+        //         alert("DOWN");  
+        //     }
+        //     else{ // 그것도 아닌 경우
+        //         alert("꽝");  
+        //     }
+        // }
+
+
+        // 오늘의 project
+        //  up & down 게임 만들어보기 , 내가 제시한 숫자를 컴퓨터가 예측해서 
+        //  범위를 좁혀가며 정답을 맞춰야함.
+        //  범위중 최대값 50에서 최소값 22를 빼고 1을 더한값 50-22+1 => 29를 *29에 사용
+        //  Math.floor(Math.random()*29)+22;
+        //  범위 계산식을 생각해서 추측해야함 
+
+
+    // var min = 1; // 범위의 최소값
+    // var max = 50; // 범위의 최대값
+    // var guessCount = 0; // 추측 횟수 초기화
+
+    // while (true) {
+    // var guess = Math.floor((min + max)/2); // 범위의 중간값 추측
+
+    // var user = parseInt(prompt("컴퓨터가 추측한 숫자는 " + guess + " 입니다. 맞으면 0, up은 1, down은 2를 입력."));
+
+    // if (user === 0) {
+    //     document.write("컴퓨터가 정답을 입력했습니다.");
+    //     break;
+    // }   else if (user === 1) {
+    //     min = guess +1; // 추측한 숫자보다 크므로 범위의 최소값을 변경
+    // }   else if (user === 2) {
+    //     max = guess -1; // 추측한 숫자보다 작으므로 범위의 최대값을 변경
+    // }   else {
+    //     alert("잘못된 입력입니다. 처음으로");
+    // }
+    //     guessCount++;
+    // }
+    //     document.write("컴퓨터가 " + guessCount + "번 추측하여 숫자를 맞췄습니다.");
+
+
+
+    //강사 solution
+        var i=50 , k=1 , max=50;
+        var com = parseInt(prompt("1~50중 정수 하나 입력"));
+
+        while(true){
+            var com=Math.floor(Math.random()*i)+k;
+            if(user==com)
+            document.write("정답"); break;
+            }
+            if(user<com){
+                document.write("DOWN "+com+"(범위:"+k+"~"+max+")<br>");
+                max =com -1;
+            }
+            if(user>com){
+                document.write("UP"+com+"(범위:"+k+"~"+max+")<br>");
+                k = com+1;
+                i = max-k+1;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

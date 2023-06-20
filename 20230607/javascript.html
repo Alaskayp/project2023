@@ -1,0 +1,127 @@
+<!--javascript.html 함수형 언어-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //함수형 언어
+    /*html 문서를 지칭한다. write라는 함수를 입력해서 화면에 출력시킴
+    엄연히 java와 java script는 다르다. java는 객체지향언어를 뜻한다.*/
+    // "",''는 문자열을 뜻한다. 문자열은 숫자가 아니다. 문자이다.
+    //작은 따옴표는 고유 대명사를 쓸 때 , 주로 사용한다.
+    //java script는 통합으로 쓴다. var number=10; ,number='aaa';
+    // 무조건 따옴표 안에 입력해야 html 태그를 받아들인다.
+
+
+
+    //variable(변수) = var
+
+    /*변수를 지정할 때 , 반드시 첫글자는 영어로 지정해야함 ,
+    숫자를 넣으면 오류가 걸림. 변수의 이름은 bar는 적용 할 수 있음.
+    대소문자 지정을 잘해야함*/
+
+
+        /*변수 - 데이터가 저장되어있는 메모리 공간
+    자바 스크립트에서는 변수의 공간에 어떤 데이터도 저장 할 수 있다. 
+    = 은 연산자이다. 컴퓨터 언어에서는 대입연산자라고 한다.
+    언어에서는 같다라는 의미로 사용하지 않음 , 대입으로 쓰인다.
+    대입 연산자는 오른쪽의 값을 왼쪽에 저장 */
+    var number=10;
+
+    document.write("<br>안녕 나는 자바스크립트야<br>");
+    document.write("오늘 뭐 먹었어?<br>");
+    document.write("사과를 먹었어<br><br>");
+
+    var a=10;
+    var b=5;
+    var c=15;
+    
+    document.write("<div>과일은 총 "+(a+b+c)+"개 이다.</div><br><br>");
+
+      //밑변 15 , 높이 20을 가지는 삼각형의 넓이를 구하여 출력하시오.
+    //출력결과는 -> 밑변:15 높이:20 삼각형의 넓이 :150
+
+    var width=15;
+    var height=20;
+
+    document.write("밑변:" +width+ "높이 :" +height);
+    document.write("<br>삼각형의 넓이:" +(width*height*0.5)+"<br>");
+
+    var tall=180;
+    var my_tall="나의 키는 "+ tall;
+
+
+    document.write("<br>"+my_tall+"<br>");
+
+
+    my_tall= "OOO의 키는 " +160;
+    document.write(my_tall+"<br><br>");
+
+
+    var num1=10;
+    var num2=30;
+    // num1+num2 , num1-num2 , num1*num2 , num1/num2
+
+    document.write("<br><br>")
+    document.write(num1/num2 + "<br>");
+    document.write(num1%num2 + "<br><br><br>"); //나머지 값
+    
+    // 오늘의 숙제가 있음. 이제부터 자바스크립트를 배우기 때문에
+    // 숙제가 매일 있을 예정
+    // 문제는 1개만
+    // 그래서 오늘 과제는
+    //반지름이 r(10)인 원이 있다. 이 원의 넓이와 둘레를 구하여 출력
+
+
+
+    var radius1=10;
+
+    document.write("원의 넓이는" +(radius1*radius1*Math.PI) + "이다<br><br>");
+    document.write("원의 둘레는" +(radius1*Math.PI*2) + "이다<br><br>");
+
+//여기까지 출력에 대한것을 다룸.
+
+//입력하는 방법
+
+    var r= Number(prompt("반지름을 입력하시오!"));
+
+    //prompt 함수는 브라우저에서 입력창을 제공하는 기능을 가지고있다.
+    //prompt로 입력한 내용은 반드시 , 무조건! 문자열이다.
+    //문자열에서 숫자 변환하는 방법 : number(), parseInt()//
+    //Number() : 숫자만 있는 문자열인 경우에 변환 가능
+
+    /*parseInt() : 숫자와 문자가 섞여있어도 변환 가능
+    문자열의 앞쪽에 있는 숫자만 변환 해준다.*/
+
+    //데이터의 타입을 알고싶은 경우 typeof() 를 사용하면된다.
+    document.write(typeof(r));
+
+    var r=10;
+    var area=r*r*3.14;
+    var dist=r*2*3.14;
+    document.write("원의 넓이 : "+area+" 원레 둘레:"+dist+"<br><br>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!--script_if.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    /*
+
+    제어문
+        -조건문 (if , switch)
+        -반복문 (for , while , do-while)
+
+
+    if문 - 조건식의 결과가 참이냐 거짓이냐에 따라 코드를 실행 시켜주는
+        제어문 , 분기문이라고도 한다.
+        코드의 흐름을 점프해서 동작 시키기 떄문에 순차적 실행이 아니다.
+
+    if(조건식){
+        조건식이 참이라면 실행할 코드
+    }
+
+    */
+
+    // //ex
+    // var age=19;
+    // var temp=0;
+    // if(age>=20){
+    //     document.write("성인이다.");
+    //     var temp=123 // 지역변수 - 블럭안에서 생성된 변수는 해당 블럭에서만 사용가능
+    //     temp=2323;
+    //     const pi=3.14;
+    // }
+    // document.write(temp); //중괄호를 벗어나면 중괄호 안에 있는 변수를 사용할 수 없다.
+    // document.write("나는 if랑 아무상관없이 동작한다."); // if의 중괄호 범위에서 벗어나면 포함되지 않는다.
+
+
+
+    // var age=19
+    // if(age>=20){ //{}는 조건식이 참일경우에만 실행
+    //     document.write("성인이다.")
+    // }
+    // else{ //else뒤에 {}는 조건식이 거짓일 경우에만 실행
+    //     document.write("성인이 아니다.")
+    // }
+
+
+
+    //바이킹 탑승 조건 키가 150이상인 사람만 탈 수 있다.
+    //if문으로 작성해보기
+    // var tall=161;
+    // if (tall>=150){
+    //     document.write("바이킹 탑승 가능");
+    // }
+    // else{
+    //     document.write("바이킹 탑승 불가능");
+    // }
+
+
+    //동전 앞면 뒷면 맞추기
+
+    // var coin =Math.floor(Math.random()*2)+1;
+    // var select =parseInt(prompt("동전 앞뒤 맞추기"));
+    // if (coin==1) {
+    // document.write("동전 앞면");
+    // }
+    // else{
+    // document.write("동전 뒷면");
+    // }
+
+
+    //주사위 1개를 던진다 2의 배수가 나올 경우에만 승리 , 아니면 패배 출력
+
+
+    // var dice =Math.floor(Math.random()*6)+1;
+    // var select =parseInt(prompt("주사위 굴리기"));
+
+    // if(dice%2==0){
+    //     document.write(dice);
+    //     document.write("승리");
+    // }
+    // else{
+    //     document.write(dice);
+    //     document.write("패배");
+    // }
+
+
+
+
+    //가위 바위보를 if문으로 간단히 만드세요.
+    //else뒤에는 절대 조건식을 넣을 수 없다.
+
+
+    // var com  = Math.floor(Math.random()*3)+1;
+    // var user = parseInt(prompt("1.가위 2.바위 .3보"));
+    
+    // //if문만 사용한 경우 (else if를 사용하여 좀 더 가독성 있게 만들 수 있음)
+    // if(user==com){
+    //     document.write("비기다");
+    // }
+
+    // if((user==1 && com==3) ||  (user==2 && com==1) || (user==3 && com==2));
+    // {
+    //     document.write("이김");
+    // }
+
+
+    // if((user==1 && com==2)||(user==2 && com==3)||(user==3 && com==1))
+    // {
+    //     document.write("패배");
+    // }
+
+    // 조건에 따른 결과가 3개 이상이라면 else if
+    // 조건식이 두개 이상 필요한 경우 else if
+
+
+
+
+
+    //주사위를 컴퓨터와 대결하기
+    //주사위를 각각 2개를 던진다.
+    //승리 조건은 두 주사위의 합이 큰쪽이 이기고 , 같은 숫자가 나온 경우에 승리
+    // var com1  = Math.floor(Math.random()*6)+1;
+    // var com2  = Math.floor(Math.random()*6)+1;
+
+    // var user1 = Math.floor(Math.random()*6)+1;
+    // var user2 = Math.floor(Math.random()*6)+1;
+
+    // var com_sum = com1+com2;
+    // var user_sum = user1+user2;
+
+    // if(user_sum > com_sum )   //나의 주사위 합이 더 큰 경우
+    //     if(com1==com2){         //내 합이 더 크지만 컴퓨터 주사위가 같은 경우
+    //         if(user1==user2){   //컴퓨터 주사위가 같지만 나도 주사위가 같은 숫자인 경우
+    //             alert("나의 승리");
+    //         else{
+    //             alert("나의 패배");
+    //         }
+    //     }
+    // }else if(user_sum < com_sum){
+    //     if(user1==user2){
+    //         if(com1==com2){
+    //             alert("나의 패배");
+    //         }
+    //     }else{
+    //         alert("나의 승리");
+    //     }
+    // }else{ //주사위의 합이 컴퓨터와 내가 같은 경우
+    //     alert("나의 패배");
+    // }
+
+    // else{
+    //     if(user1==user2){{
+    //         alert("나의 승리");
+    //     }
+    // }else if(com1==com2){
+    //     alert("나의 패배");
+    // }else{
+    //     alert("나의 패배");
+    // }
+    // }else if(user1==user2 && com1==com2){
+    //     alert("비김");
+    // }else if  (user1==user2){
+    //     alert("나의 승리");
+    // }else if(com1==com2){
+    //     alert("나의 패배");
+    // }else{
+    //     alert("비김");
+    // }
+
+        //점수가 100-90 A , 89~80 B, 79~70 C , 나머지는 F
+        //큰 값부터 따지게 되면 식이 좀 더 간편해질 수 있다.
+        // var score=91;
+        // if(score<=100 && score>=90)
+        // alert("A등급");
+        // else if(score<90 && score>=80)
+        // alert("B등급");
+        // else if(score<80 && score>=70)
+        // alert("C등급");
+        // else
+        // alert("F등급");
+
+    //100m 달리기 , 10초 이하는 매우빠름 , 10~12초는 빠름 , 13~17초는 보통 , 18이상은 느림
+
+
+
+    // var runtime= parseFloat(prompt("100m 기록(초)을 입력하세요:"));
+    // var run_time=12;
+
+    // if (18<=runtime) 
+    // alert("느림"); 
+    
+    // else if (13<=runtime)
+    // alert("보통");
+    
+    // else if (10<=runtime)
+    // alert ("빠름");
+    
+    // else
+    // alert("매우 빠름");
+    
+
+
+
+
+    //주차 시간을 입력해서 주차요금이 얼마인지 출력하기 , 주차시간은 분단위 입력
+    // 61분 주차시 요금은 1300원(기본요금 1000원에 30분 초과 300원)
+                //119분 주차시 요금은 1800원(기본요금 1000원에 30분 초과 800원)
+                //134분 주차시 요금은 1600원(2시간 이상 주차이기 때문에
+                                            //기본요금 1500원에 30분 초과 100원)
+
+//2시간 이상 주차시 기본요금 1500원
+//4시간 이상 주차시 기본요금 2500원
+//8시간 이상 주차시 기본요금 10000원
+//추가요금 100원
+
+// var parkingTime = parseInt(prompt("주차 시간(분)을 입력하세요:"));
+// var basefee = 1000; 
+// var additionalFee = 100;
+// var basetime=30;
+// var parkingprice=0;
+
+// if (parkingTime >= 480) { 
+// basepay = 10000;
+// } else if (parkingTime >= 240) { 
+// basepay = 2500;
+// } else if (parkingTime >= 120) { 
+// basepay = 1500;
+// }
+// else{
+//     basepay=1000;
+// }
+
+// var totalFee = basepay + additionalFee;
+// document.write("주차 시간:", parkingTime, "분");
+// document.write("주차 요금:", totalFee, "원");
+
+
+// document.write("주차시간 :"+time+"분");
+// document.write("주차요금 :"+totalpay+"원");
+
+
+// //강사님 솔루션
+// var time = parseInt(prompt("주차 시간(분)을 입력하세요:"));
+// var cost=1000;
+// var time=30;
+
+// if(time>=480){
+//     cost=10000;
+//     time=0;
+// }
+
+// else if(time>=240){
+//     cost=2500;
+//     time=-240;
+// }
+
+// else if(time>=120){
+//     cost=1500;
+//     time=-120;
+// }
+
+// else if(time<40){
+//     time=-30;  // 기본 시간이 30분이니깐
+// }
+
+// else{
+//     time=0;
+// }
+
+// var price= cost+parseInt(prompt(time/10)*100);
+// document.write("주차요금:"+price);
+
+//숫자를 하나 입력받는다 . 숫자는 1~3중에 하나만 입력
+//1을 입력했다면 빨간색 사각형이
+//2를 입력했다면 노랑색 사각형이
+//3을 입력했다면 핑크색 사각형이 화면에 나오게 하시오.
+// 사각형의 크기는 너비:200 , 높이 100
+//
+
+// var number = parseInt(prompt("숫자를 입력하세요 (1, 2, 3):"))
+
+// if (number==1){
+//     document.write('<div style="width: 200px; height: 100px; background-color: red;"></div>');
+// }
+
+// else if(number==2){
+//     document.write('<div style="width: 200px; height: 100px; background-color: yellow;"></div>');
+// }
+
+// else if(number==3){
+//     document.write('<div style="width: 200px; height: 100px; background-color: pink;"></div>');
+// }
+
+// else{
+//     alert("1~3까지의 숫자를 입력해야 삼각형이 출력됩니다.");
+// }
+
+
+
+
+    // var num=parseInt(prompt("숫자입력(1~3)"));
+
+    // if(num==1){
+    //     document.write("<div class='red'></div>");
+    // }else if(num==2){
+    //     document.write("<div class='yellow'></div>");
+    // }else if(num==3){
+    //     document.write("<div class='pink'></div>");
+    // }
+
+    //red이라고 입력하면 빨간색 사각형이
+    //yellow이라고 입력하면 노란색 사각형에
+    //blue이라고 입력하면 파랑색 사각형이 그려지게 만드시오.
+    
+    // var color=prompt("색상을 입력하세요 (red , yellow , blue)");
+
+    // if(color==="red"){
+    //     document.write("<div class='red'></div>");
+    // }
+
+    // else if(color==="yellow"){
+    //     document.write("<div class='yellow'></div>");
+    // }
+
+
+    // else if(color==="blue"){
+    //     document.write("<div class='blue'></div>");
+    // }
+
+    // else{
+    //     alert("red , yellow , blue 중 하나를 입력해야 색이 나옵니다");
+    // }
+
+
+    // 주사위 게임 문제
+    // 주사위가 3개가 있다.
+    //3개의 주사위를 굴렸을때 나온 숫자를 각각 a,b,c라고 한다면
+    //세 숫자가 모두 다른 경우 a+b+c의 값을 출력
+    //두 숫자가 같고 나머지가 다른 숫자라면 a*a+b*b+c*c 값 출력
+    // 세 숫자가 모두 같다면 a*b*c 값 출력
+
+
+var dice=parseInt(prompt("주사위 굴리기 게임"));
+var dice1 = Math.floor(Math.random() * 6) + 1;  
+var dice2 = Math.floor(Math.random() * 6) + 1;  
+var dice3 = Math.floor(Math.random() * 6) + 1; 
+
+if(dice1===dice2 && dice1===dice3 && dice2===dice3){
+var result= dice1+dice2+dice3
+    document.write("1.모두 같은 경우의 수" ,result);
+}
+
+
+else if(dice1==dice2 && dice1!=dice3 || dice1==dice3 && dice1 != dice2 || dice2===dice3 && dice2===dice1){
+var result= dice1*dice1+dice2*dice2+dice3*dice3
+    document.write("2.두개가 같고 나머지가 다른 숫자" ,result);
+}
+
+else if(dice1 !== dice2 && dice1 !== dice3 && dice2 !== dice3){
+    var result= dice1*dice2*dice3
+    document.write("3.모두 다른 경우의 수" ,result);
+}
+
+else{
+    alert("새로고침을 하면 경우의 수에 대한 결과값이 나옵니다 F5");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+    div{width: 200px; height: 100px;}
+    .red{background: red;}
+    .yellow{background:yellow;}
+    .blue{background: blue;}
+</style>
+
+</head>
+<body>
+</body>
+</html>
