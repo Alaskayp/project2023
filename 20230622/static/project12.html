@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Sugar Check</title>
+<script src="./js/project.12.js"></script>
+</head>
+<body>
+
+<!--문제 1번 혈당계산-->
+
+
+
+<h1>혈당계산</h1>
+<label for="bloodSugarInput">혈당계산 레벨 측정:</label>
+<input type="number" id="bloodSugaerInput" step="0.1">
+<button onclick="input()">Check</button>
+<p id="result"></p>
+
+
+
+<!-- 문제2.
+        상수가 비만도 측정을 하였다.
+        비만도 BMI 지수 계산은 몸무게/(키/100)*(키/100)
+        BMI 지수가 18.5 이하면 저체중
+        18.5~22.9 사이면 정상
+        23.0~24.9 사이면 과체중
+        25이상은 비만
+-->
+    <h1>BMI 지수 계산하기</h1>
+    <input type="number" id="weight">
+    <input type="number" id="height">
+    <button onclick="input()">비만도 측정</button>
+    <b id="result"></b>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

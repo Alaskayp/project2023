@@ -1,0 +1,140 @@
+*{box-sizing: border-box;}
+
+
+body, ul, p ,h1, h2, h3, h4, h5,
+ol , dl{
+    padding:0;
+    margin: 0;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+
+a{
+    text-decoration: none;  
+}
+
+a:hover{
+    text-decoration: underline;
+    color:aqua;
+}
+
+
+
+
+#wrap{
+    width: 85%;
+    max-width: 1000px;
+    min-width: 500px;
+    margin: 50px auto;
+}
+
+.line{
+    border-bottom: 2px solid brown;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.menu_bt{
+    font-size: 25px;
+    display: inline-block;
+    padding:10px 20px;
+    color: white;
+    font-weight: 800;
+    border-radius: 10px;
+    text-shadow: 3px 3px 3px 3px black;
+}
+
+
+#menu .menu_bt:nth-child(1){
+    background: darkviolet;
+}
+
+#menu .menu_bt:nth-child(2){
+    background: darkturquoise;
+}
+
+#menu .menu_bt:nth-child(3){
+    background:darkgrey;
+}
+
+.menu_icon{
+    display: none;
+}
+
+.strapIcon{
+    font-size:30px;
+    cursor: pointer;
+}
+
+
+
+
+.menu_list{
+    display: none;
+    position:absolute;
+    /*분모쪽 기준에만 영향을 받는다.*/
+    background: white;
+    width: 100%;
+    font-size: 30px;
+    box-shadow: 0px 3px 5px #000;
+    /*앱솔루트가 때문에 라인 위에 표시되고 있는 상태임
+    실제로는 라인이 존재하고 있음 */
+}
+
+.list_bt{
+    display: block;
+    padding: 10px;
+}
+
+.menu_list li:nth-child(1) a:hover{
+    background: yellow;
+}
+
+.menu_list li:nth-child(2) a:hover{
+    background: orange;
+}
+
+.menu_list li:nth-child(3) a:hover{
+    background: pink;
+}
+
+
+
+.list_active{
+    display: block;
+}
+
+
+
+
+
+
+/*
+
+미디어 쿼리 재설명
+    이하 : max-width
+    이상 : min-width
+    웹 제작을 PC로 우선 제작시 , max-width
+        모바일 우선으로 제작시, min-width
+
+*/
+
+
+@media screen and (max-width:786px){
+    #menu{
+        display: block; /*전체 다 쓸거면 flex보단 block이 맞음*/
+        position: relative;
+    }
+    .menu_icon{
+        display: block;
+    }
+    .menu_bt{display:none;}
+}

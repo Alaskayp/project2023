@@ -1,4 +1,4 @@
-let com_num = 0;
+    let com_num = 0;
     let user_num = 0;
     let win = 0;
     let lose = 0;

@@ -306,64 +306,105 @@
 
 
 function getId(name) {
-    return document.getElementById(name);
-}
+            return document.getElementById(name);
+        }
 
-let out = ""; // 전역 변수
+        let out = ""; // 전역 변수
 
-function order() {
-    var drink = getId("drink");
-    var tmp = getId("ice_hot");
-    var size = getId("size");
+        function order() {
+            var drink = getId("drink");
+            var tmp = getId("ice_hot");
+            var size = getId("size");
 
-    var total = drink_menu(drink.value);
-    if (total === 0) {
-        // 판매하지 않는 메뉴 입력시
-        alert("판매하지 않는 메뉴입니다.");
-        drink.value = ''; // 음료명 Input 값 비워주기
-        drink.focus();
-        return;
-    }
+            var total = drink_menu(drink.value); // 내가 아래에 입력했던 switch문이 들어가 있는 함수의 값이 여기로 반환됌 ( return 사용 )
+            if (total === 0) {
+                // 판매하지 않는 메뉴 입력시
+                alert("판매하지 않는 메뉴입니다.");
+                drink.value = ''; // 음료명 Input 값 비워주기
+                drink.focus();
+                return;
+            }
 
-    // 아이스인지 핫인지 확인
-    if (!(tmp.value.toLowerCase() === "ice" || tmp.value.toLowerCase() === "hot")) {
-        alert("ice 또는 hot이라고 입력하세요.");
-        tmp.value = 'ice';
-        tmp.focus();
-        return;
-    }
+            // 아이스인지 핫인지 확인
+            if (!(tmp.value.toLowerCase() === "아이스" || tmp.value.toLowerCase() === "핫")) {
+                alert("아이스 또는 핫이라고 입력하세요.");
+                tmp.value = '아이스';
+                tmp.focus();
+                return;
+            }
 
-    // 사이즈 M이나 L이냐 아니면 잘못입력했냐?
-    if (!(size.value.toLowerCase() === "m" || size.value.toLowerCase() === "l")) {
-        alert("M 또는 L사이즈를 입력하세요");
-        size.value = "M";
-        size.focus();
-        return;
-    }
+            // 사이즈 M이나 L이냐 아니면 잘못입력했냐?
+            if (!(size.value.toLowerCase() === "m" || size.value.toLowerCase() === "l")) {
+                alert("M 또는 L사이즈를 입력하세요");
+                size.value = "M";
+                size.focus();
+                return;
+            }
 
-    total = total + (size.value.toLowerCase() === 'm' ? 0 : 1000);
+            total = total + (size.value.toLowerCase() === 'm' ? 0 : 1000);
 
-    out += drink.value + " / " + tmp.value + " / " + size.value + " : " + total + "원";
+            out += drink.value + " / " + tmp.value + " / " + size.value + " : " + total + "원";
 
-    getId("list").innerHTML = out;
-}
+            getId("list").innerHTML = out;
+        }
 
-function drink_menu(drink) {
-    switch (drink) {
-        case "아메리카노":
-            return 2000;
-        case "카페라떼":
-            return 3000;
-        case "돌체라떼":
-            return 4500;
-        case "모카라떼":
-            return 3000;
-        case "수박주스":
-            return 4500;
-        case "바나나주스":
-            return 4500;
-        default:
-            return 0;
-    }
+        function drink_menu(drink){
+            switch (drink) {
+                case "아메리카노":
+                    return 2000;
+                //    alert("aa");          //어떤 케이스든지 사용이 가능합니다. (alert 안내창 , document.write(); var , if() , for() , switch();)
+                //    document.write();     //if// return을 사용하게 되면 , fuction(drink_menu)의 전체 함수의 동작이 종료됩니다.
+                //    var a=10;             // 선택된 케이스에 break;를 걸 경우 , switch의 함수만 종료됩니다.
+                //    if(){                 
 
-}
+                //    }
+                //    for(){
+
+                //    }
+                //    switch(){
+
+                //    }
+                //    break;
+                case "카페라떼":
+                    return 3000;
+                case "돌체라떼":
+                    return 4500;
+                case "모카라떼":
+                    return 3000;
+                case "수박주스":
+                    return 4500;
+                case "바나나주스":
+                    return 4500;
+                default:
+                    return 0;
+            }
+           // alert("aa"); 안내창
+        }
+
+
+
+//ex) 이번달은몇월 
+//월 = 6;
+// switch 문을 활용할 때 , 가장 크게 사용 되는 기능은 break; 랑 , return이 대표적임.
+
+        
+        switch(월){
+            case 1:
+                alert("겨울입니다");
+            case 2:
+                alert("겨울입니다");
+            case 3:
+                alert("봄입니다");
+                break;          // break; 를 사용하게 되면 , case가 선택된 구간에서 함수가 종료됌. 
+            case 4:
+                alert("봄입니다");
+                break;
+            case 5:
+                alert("봄입니다");
+                break;
+            case 6:
+                alert("여름입니다"); // 6이 선택됌 , switch 함수에 대한 선택된 case 6 번 이 선택되면서 종료 .
+                break;              // return을 사용할 경우 , switch를 감싸고 있는 전체 함수의 동작이 종료됌.
+            case 7:         
+                alert("여름입니다");
+        }
