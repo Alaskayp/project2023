@@ -109,6 +109,29 @@ function open_close(){
         //     list.classList.toggle("list_active");
 }
 
+
+let content= querySelector("#content");
+
+
+
+
 function win_confirm(){
+    alert("당첨확인 클릭");
+}
+
+function make_num(){
+    let lucky_num = new Array();
+    lucky_num.push(Math.floor(Math.random()*45)+1);
+    for(var i =1; i < 6; i++){
+        var num =Math.floor(Math.random()*45)+1;
+        if(lucky_num.indexOf(num)==1){
+            lucky_num.push(num);
+        }else{
+            i--;
+        }
+    }
+}
+
+function num_count(){
     alert("당첨확인 클릭");
 }
